@@ -23,7 +23,7 @@ const Repos = () => {
     const handleChange = (event) => {
         setOp(event.target.value);
         setSearch('');
-        if(event.target.value == 0){setRepoFiltrado(repos.filter((repo) => repo.language != null))}
+        if(event.target.value == 0){setRepoFiltrado(repos.filter((item) => item.language != null))}
         if(event.target.value == 1){setRepoFiltrado(repos.filter((item) => item.archived == true))}
         if(event.target.value == 2){setRepoFiltrado(repos.filter((item) => item.disabled == true))}
     };
@@ -32,7 +32,7 @@ const Repos = () => {
         console.log(search);
         console.log(op);
         if(search == ''){
-            if(op == 0){setRepoFiltrado(repos.filter((repo) => repo.language != null))}
+            if(op == 0){setRepoFiltrado(repos.filter((item) => item.language != null))}
             if(op == 1){setRepoFiltrado(repos.filter((item) => item.archived == true))}
             if(op == 2){setRepoFiltrado(repos.filter((item) => item.disabled == true))}
         }
